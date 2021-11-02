@@ -241,7 +241,7 @@ $.fn.select2.amd.define('optgroup-results', ['select2/results', 'select2/utils',
             $options.each(function () {
                 var $option = $(this);
 
-                var item = $.data(this, 'data');
+                var item = Utils.GetData(this, 'data');
 
                 // id needs to be converted to a string when comparing
                 var id = '' + item.id;
