@@ -27,7 +27,7 @@ $.fn.select2.amd.define('optgroup-results', ['select2/results', 'select2/utils',
         this.$results.on('mouseup', '.select2-results__group', function(evt) {
             var $this = $(this);
             
-            var data = $this.data('data');
+            var data = Utils.GetData(this, 'data')
 
             var trigger = ($this.attr('aria-selected') === 'true')  ? 'optgroup:unselect' : 'optgroup:select';
             
